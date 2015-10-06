@@ -1,0 +1,10 @@
+applications:
+- redis
+parameters:
+  redis:
+    server:
+      enabled: true
+      bind:
+        address: 127.0.0.1
+        port: 6379
+        protocol: tcp

@@ -1,0 +1,2 @@
+redis/*             /usr/share/salt-formulas/env/redis/
+metadata/service/*      /usr/share/salt-formulas/reclass/service/redis/

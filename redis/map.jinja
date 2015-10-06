@@ -1,0 +1,30 @@
+
+{% set server = salt['grains.filter_by']({
+    'Arch': {
+        'pkgs': ['redis'],
+        'service': 'redis',
+        'conf_dir': '/etc/redis.conf',
+        'bind': {
+            'address': '127.0.0.1',
+            'port': '6379'
+        }
+    },
+    'Debian': {
+        'pkgs': ['redis-server'],
+        'service': 'redis-server',
+        'conf_dir': '/etc/redis/redis.conf',
+        'bind': {
+            'address': '127.0.0.1',
+            'port': '6379'
+        }
+    },
+    'RedHat': {
+        'pkgs': ['redis'],
+        'service': 'redis',
+        'conf_dir': '/etc/redis/redis.conf',
+        'bind': {
+            'address': '127.0.0.1',
+            'port': '6379'
+        }
+    },
+}, merge=salt['pillar.get']('redis:server')) %}
