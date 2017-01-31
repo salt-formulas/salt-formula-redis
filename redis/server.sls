@@ -14,9 +14,9 @@ vm.overcommit_memory:
   file.managed:
   - source: salt://redis/files/{{ server.version }}/redis.conf
   - template: jinja
-  - user: root
-  - group: root
-  - mode: 644
+  - user: redis
+  - group: redis
+  - mode: 640
   - require:
     - pkg: redis_packages
 
