@@ -1,10 +1,18 @@
-# Redis
+ 
+=============
+Redis formula
+=============
 
 key value storage
 
-## Sample pillars
+
+Sample pillars
+==============
 
 Redis localhost server
+
+
+.. code-block:: yaml
 
     redis:
       server:
@@ -16,6 +24,8 @@ Redis localhost server
 
 Redis world open
 
+.. code-block:: yaml
+
     redis:
       server:
         enabled: true
@@ -26,12 +36,16 @@ Redis world open
 
 Redis modes
 
+.. code-block:: yaml
+
     redis:
       server:
         enabled: true
         appendfsync: no | everysec | always
 
 Redis cluster master
+
+.. code-block:: yaml
 
     redis:
       cluster:
@@ -51,6 +65,8 @@ Redis cluster master
 
 Redis cluster slave
 
+.. code-block:: yaml
+
     redis:
       cluster:
         enabled: True
@@ -67,7 +83,9 @@ Redis cluster slave
             name: sentinel
             type: redis
 
-## Command usage
+
+Command usage
+=============
 
 Removes data from your connection's CURRENT database.
 
@@ -77,11 +95,14 @@ Removes data from ALL databases.
 
     > redis-cli FLUSHALL
 
-## Read more
+
+More information
+================
 
 * http://redis.io/topics/admin
 * http://redis.io/topics/quickstart
 * http://redis.io/topics/persistence
+
 
 Documentation and Bugs
 ======================
