@@ -10,6 +10,6 @@ Vcs-Git: https://github.com/tcpcloud/salt-formula-redis.git
 
 Package: salt-formula-redis
 Architecture: all
-Depends: ${misc:Depends}, salt-master, reclass
+Depends: ${misc:Depends}
 Description: Redis salt formula
  Install and configure Redis service.
