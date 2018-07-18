@@ -1,4 +1,3 @@
- 
 =============
 Redis formula
 =============
@@ -18,7 +17,7 @@ Redis localhost server
       server:
         enabled: true
         bind:
-          address: 127.0.0.1 
+          address: 127.0.0.1
           port: 6379
           protocol: tcp
 
@@ -30,7 +29,7 @@ Redis world open
       server:
         enabled: true
         bind:
-          address: 0.0.0.0 
+          address: 0.0.0.0
           port: 6379
           protocol: tcp
 
