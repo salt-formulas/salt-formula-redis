@@ -37,6 +37,9 @@
     'xenial': {
         'version': '3.0',
     },
+    'bionic': {
+        'version': '4.0',
+    },
 }, grain='oscodename', merge=salt['pillar.get']('redis:server'))) %}
 
 {% set cluster = salt['grains.filter_by']({
