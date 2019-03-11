@@ -1,7 +1,7 @@
 {%- from "redis/map.jinja" import server with context %}
 {%- from "redis/map.jinja" import cluster with context %}
 
-{%- if cluster.enabled %}
+{%- if cluster and cluster.enabled %}
 
 {%- if cluster.service is defined %}
 redis_cluster_packages:
