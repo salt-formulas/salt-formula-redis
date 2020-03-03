@@ -40,6 +40,9 @@
     'bionic': {
         'version': '4.0',
     },
+    'buster': {
+        'version': '5.0',
+    },
 }, grain='oscodename', merge=salt['pillar.get']('redis:server'))) %}
 
 {% set cluster = salt['grains.filter_by']({
@@ -48,6 +51,14 @@
     },
 }, merge=salt['grains.filter_by']({
     'stretch': {
+        'pkgs': ['redis-sentinel'],
+        'service': 'redis-sentinel',
+        'sentinel': {
+            'address': '127.0.0.1',
+            'port': '26379'
+        }
+    },
+    'buster': {
         'pkgs': ['redis-sentinel'],
         'service': 'redis-sentinel',
         'sentinel': {
