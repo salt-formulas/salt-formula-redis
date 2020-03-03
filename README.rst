@@ -62,7 +62,7 @@ Redis cluster master
             name: sentinel
             type: redis
 
-Redis cluster slave
+Redis cluster replica
 
 .. code-block:: yaml
 
@@ -74,7 +74,7 @@ Redis cluster slave
           port: 6379
         mode: sentinel
         quorum: 2
-        role: slave
+        role: replica
     supervisor:
       server:
         service:
